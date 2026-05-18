@@ -119,6 +119,7 @@ function handleRemoveSurprisePhoto() {
       setMessage('')
 
       let avatarPath = initialProfile?.avatar_path || null
+      let surprisePhotoPath = initialProfile?.surprise_photo_path || null
 
       if (removeAvatar && initialProfile?.avatar_path) {
         await supabase.storage.from('avatars').remove([initialProfile.avatar_path])
@@ -143,14 +144,16 @@ function handleRemoveSurprisePhoto() {
 
         let surprisePhotoPath = initialProfile?.surprise_photo_path || null
 
+
+}
+
 if (removeSurprisePhoto && initialProfile?.surprise_photo_path) {
   await supabase.storage
     .from('user-media')
     .remove([initialProfile.surprise_photo_path])
 
   surprisePhotoPath = null
-}
-
+  
 if (surpriseFile) {
   const fileExt = surpriseFile.name.split('.').pop() || 'jpg'
   const filePath = `${userId}/surprise/surprise-${Date.now()}.${fileExt}`

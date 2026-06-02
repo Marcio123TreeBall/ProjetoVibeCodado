@@ -100,11 +100,11 @@ export function SoundtrackCard({
 
   return (
     <section className="section">
-      <h2 className="section-title">Nossa Trilha Sonora</h2>
+      <h2 className="section-title">Apenas Escute...</h2>
 
       <div className="music-player card">
         <div className="player-info">
-          <p className="song-title">Nossa Música Especial</p>
+          <p className="song-title">Uma música especial</p>
 
           <div className="grid">
             <input

@@ -3,6 +3,7 @@
 import { useMemo, useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import { Analytics } from '@vercel/analytics/next'
 
 type RandomItem = {
   type: string
@@ -111,6 +112,7 @@ export function DashboardHero({
     <>
       <section className="hero">
         <div className="hero-content">
+          <Analytics/>
           <h1>
             Bem-vindo(a), {displayName}, ao cantinho onde nossas memórias vivem
             com carinho
